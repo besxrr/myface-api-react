@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from "react";
-import {SingleUser} from "./SingleUser";
+import React, { useEffect, useState } from "react";
+import { SingleUser } from "./SingleUser";
 
 export function UsersPage() {
     const [userData, setUserData] = useState(null);
@@ -24,7 +24,7 @@ export function UsersPage() {
 
     return (
         <div className="UsersPage">
-            <div>{usersHTML}</div>
+            {usersHTML}
         </div>
     );
 };

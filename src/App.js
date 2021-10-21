@@ -1,12 +1,14 @@
 import './App.css';
-import {PostsPage} from "./PostsPage/PostsPage";
-import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
-import {UsersPage} from "./UsersPage/UsersPage";
+import './Navigation/navbar.scss'
+import { PostsPage } from "./PostsPage/PostsPage";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { UsersPage } from "./UsersPage/UsersPage";
+import { NavigationBar } from './Navigation/NavigationBar';
 
 function App() {
   return (
     <Router>
-        <h1>MyFace</h1>
+        <NavigationBar/>
         <Switch>
             <Route path="/posts">
                 <PostsPage/>

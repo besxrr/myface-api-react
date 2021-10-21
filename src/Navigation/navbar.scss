@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Karla:wght@500&display=swap');
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 5px 20px;
+
+    font-family: 'Inconsolata', monospace;
+
+    background-color: #56CBF9;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav .large-title {
+    padding-left: 15px;
+    font-size: xx-large;
+    color: #FFFFFF;
+}
+
+nav .page-links {
+    font-size: 20px;
+}
+
+nav .page-links li {
+    display: inline;
+    list-style: none;
+
+    padding: 10px;
+}
+
+.page-links a:visited {
+    color: #FFFFFF;
+}
