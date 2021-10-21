@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { SingleUser } from "./SingleUser";
 import {CreateUser} from "./CreateUser";
 import {PopUp} from "../PostsPage/PopUp";
+import './Users.scss'
 
 // TODO: Pass setUserData function as context
 export function FetchUserDataFromDatabase(setUserData)
