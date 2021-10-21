@@ -10,17 +10,21 @@ export function UsersPage() {
         }));
     }, []);
 
-    if(userData == null){
-        return <p>Loading data!</p>
+    if(userData == null)
+    {
+        return (<div className="UsersPage">
+            <h3>Loading user data</h3>
+        </div>);
     }
-    let usersHTML = [];
 
-     for(let i =0; i < userData.items.length ; i++){
-       usersHTML.push(<SingleUser key={userData.items[i].id} data={userData.items[i]}/>)
-    }
+    let usersHTML = [];
+    userData.items.map((user) => {
+        usersHTML.push(<SingleUser key={user.id} data={user}/>);
+    });
 
     return (
         <div className="UsersPage">
             <div>{usersHTML}</div>
         </div>
-    )};
+    );
+};

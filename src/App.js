@@ -1,7 +1,7 @@
 import './App.css';
-import {PostsPage} from "./Posts";
+import {PostsPage} from "./PostsPage/PostsPage";
 import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
-import {UsersPage} from "./Users";
+import {UsersPage} from "./UsersPage/UsersPage";
 
 function App() {
   return (
