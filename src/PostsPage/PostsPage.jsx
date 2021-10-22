@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {SinglePost} from "./SinglePost";
+import {CreatePost} from "./CreatePost";
 
 export function PostsPage() {
     const [postData, setPostData] = useState(null);
@@ -25,6 +26,7 @@ export function PostsPage() {
 
     return (
         <div className="PostsPage">
+            <CreatePost/>
             {postsHTML}
         </div>
 )};
