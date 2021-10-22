@@ -28,6 +28,7 @@ export function CreateUser(props)
         );
 
         setFormInputs({});
+        props.setTrigger(false);
     }
 
     return (

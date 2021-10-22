@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { SingleUser } from "./SingleUser";
 import {CreateUser} from "./CreateUser";
+import {PopUp} from "../PostsPage/PopUp";
 
 // TODO: Pass setUserData function as context
 export function FetchUserDataFromDatabase(setUserData)
@@ -11,6 +12,7 @@ export function FetchUserDataFromDatabase(setUserData)
 }
 
 export function UsersPage() {
+    const[buttonPopup, setButtonPopup] = useState(false);
     const [userData, setUserData] = useState(null);
 
     useEffect(() => FetchUserDataFromDatabase(setUserData),[]);
@@ -29,7 +31,10 @@ export function UsersPage() {
 
     return (
         <div className="UsersPage">
-            <CreateUser setUserData={setUserData}/>
+            <button onClick={() => setButtonPopup(true)}>Create new user</button>
+            <PopUp trigger={buttonPopup} setTrigger ={setButtonPopup}>
+                <CreateUser setTrigger={setButtonPopup} setUserData={setUserData}/>
+            </PopUp>
             {usersHTML}
         </div>
     );
