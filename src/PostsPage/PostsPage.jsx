@@ -29,7 +29,7 @@ export function PostsPage() {
 
     return (
         <div className="PostsPage">
-            <button onClick={() => setButtonPopup(true)}>Open Popup</button>
+            <button onClick={() => setButtonPopup(true)}>Create new post</button>
             <PopUp trigger={buttonPopup} setTrigger ={setButtonPopup}>
                 <CreatePost/>
             </PopUp>
