@@ -3,7 +3,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 3%;
-  margin: 5%;
+  margin: 3%;
 
 }
 
@@ -24,7 +24,7 @@
 }
 
 .user-container:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1) inset;
 }
 
 .user-email a {
@@ -36,11 +36,14 @@
 
 .user-container img {
   border-radius: 50%;
-  width: 50%;
+  width: 300px;
+  height: 300px;
   box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.2);
-
+  object-fit: cover;
 
 }
+
+
 
 
 

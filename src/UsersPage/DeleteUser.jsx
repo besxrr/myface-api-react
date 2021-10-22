@@ -23,7 +23,7 @@ export function DeleteUser(props) {
                 type="hidden"
             />
 
-            <input type="submit" value="delete"/>
+            <input className="myButton" type="submit" value="delete"/>
         </form>
     );
 }
