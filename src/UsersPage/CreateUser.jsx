@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
+import {FetchUserDataFromDatabase} from "./UsersPage";
 
-export function CreateUser()
+export function CreateUser(props)
 {
     const [formInputs, setFormInputs] = useState({});
 
@@ -22,9 +23,11 @@ export function CreateUser()
             body: JSON.stringify(formInputs)
         };
 
-        console.log(formInputs);
+        fetch('https://localhost:5001/users/create', requestOptions).then(() =>
+            FetchUserDataFromDatabase(props.setUserData)
+        );
 
-        fetch('https://localhost:5001/users/create', requestOptions);
+        setFormInputs({});
     }
 
     return (
