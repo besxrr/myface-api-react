@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import {SinglePost} from "./SinglePost";
 import {CreatePost} from "./CreatePost";
 import {PopUp} from "./PopUp";
+import "./PostsStyling.scss"
 
 export function getPostsData(setPostData){
     fetch("https://localhost:5001/posts").then(response => response.json().then(data => {

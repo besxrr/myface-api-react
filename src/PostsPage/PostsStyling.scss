@@ -1,0 +1,39 @@
+.post-container {
+  padding: 10px;
+  margin: 20px auto;
+  border: 1px solid black;
+  max-width: 1000px;
+}
+
+
+.userContent{
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 20px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.profile-picture {
+  height: 90px;
+  width: 90px;
+  border-style: solid;
+  border-color: #397d9a;
+  border-width: thick;
+  background-color: #397d9a;
+}
+
+.post-image{
+  width: 100%;
+}
+
+.screen-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.message{
+
+}
+
+
