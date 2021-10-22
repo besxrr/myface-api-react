@@ -3,7 +3,7 @@ import dateFormat from "dateformat";
 
 export function SinglePost(prop) {
     var datePosted = new Date(prop.data.postedAt)
-    var date = dateFormat(datePosted, "dd, mm, yyyy, h:MM")
+    var date = dateFormat(datePosted, "dd-mm-yyyy @ h:MM")
 
 
     return (
