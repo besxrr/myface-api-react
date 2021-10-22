@@ -1,8 +1,11 @@
 import React, {useEffect, useState} from "react";
 import {SinglePost} from "./SinglePost";
 import {CreatePost} from "./CreatePost";
+import {PopUp} from "./PopUp";
+
 
 export function PostsPage() {
+    const[buttonPopup, setButtonPopup] = useState(false);
     const [postData, setPostData] = useState(null);
 
     useEffect(() => {
@@ -26,7 +29,10 @@ export function PostsPage() {
 
     return (
         <div className="PostsPage">
-            <CreatePost/>
+            <button onClick={() => setButtonPopup(true)}>Open Popup</button>
+            <PopUp trigger={buttonPopup} setTrigger ={setButtonPopup}>
+                <CreatePost/>
+            </PopUp>
             {postsHTML}
         </div>
 )};
