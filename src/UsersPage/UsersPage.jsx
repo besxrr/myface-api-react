@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { SingleUser } from "./SingleUser";
+import {CreateUser} from "./CreateUser";
 
 export function UsersPage() {
     const [userData, setUserData] = useState(null);
@@ -24,6 +25,7 @@ export function UsersPage() {
 
     return (
         <div className="UsersPage">
+            <CreateUser/>
             {usersHTML}
         </div>
     );
